@@ -36,4 +36,20 @@ function playRound(player, computer) {
     }
 }
 
-playRound(playerChoice(), computerChoice());
+function playGame() {
+    for (let i = 1; i <= 5; i++) {
+        playRound(playerChoice(), computerChoice());
+        console.log(`Runda ${i}`);
+        console.log(`Wynik gracza ${playerScore}`);
+        console.log(`Wynik komputera ${computerScore}`);
+    }
+
+    if (playerScore > computerScore) {
+        console.log("Grę wygrywa Gracz!");
+    } else {
+        console.log("Grę wygrywa komputer!");
+    }
+}
+
+playGame();
+
